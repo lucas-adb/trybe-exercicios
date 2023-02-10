@@ -1,2 +1,9 @@
 # trybe-exercicios
-# Meu repositório de exercícios
+ ______________________________________ 
+< Repositório de exercícios da Trybe >
+ -------------------------------------- 
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
