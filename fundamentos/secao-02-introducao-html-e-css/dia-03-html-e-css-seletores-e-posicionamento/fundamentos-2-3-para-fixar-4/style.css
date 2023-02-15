@@ -1,0 +1,37 @@
+h3 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+div:hover {
+    border: 1px solid black;
+}
+
+#cor-primaria {
+    background-color: red;
+}
+
+#cor-secundaria {
+    background-color: purple;
+}
+
+#cor-complementar {
+    background-color: yellow;
+    width: 2600px;
+    height: 40px;
+}
+
+#cor-escura {
+    background-color: black;
+}
+
+#cor-clara {
+    background-color: silver;
+}
+
+#cor-escura h3, #cor-secundaria h3 {
+    color: white;
+}
+
+#cor-primaria h3, #cor-complementar h3, #cor-clara h3 {
+    font-style: italic;
+}
