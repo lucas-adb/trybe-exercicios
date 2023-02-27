@@ -1,54 +1,72 @@
-// TRIANGULO NORMAL
+let valor = 7;
+let asterisco = "*";
+let linha = "";
+let espaco = " ";
+let posicao = valor - 1;
+let altura = (valor + 1) / 2
+let meio = altura - 1;
 
-// let base = 5;
-// let simbolo = "*";
-// let linha = "";
+// Piramide com a base para a esquerda
 
-// for (let index = 0; index <= base; index += 1) {
+// for (i = 0; i < valor; i += 1) {
+//     linha = linha + asterisco;
 //     console.log(linha);
-//     linha += simbolo;
 // }
 
-// TRIANGULO INVERTIDO
+// Piramide com a base para a direita
 
-// let base = 5;
-// let simbolo = '*';
-// let linha = '';
-// let posicao = base - 1;
-
-// for (let index = 0; index < base; index += 1) {
-//     for (let index2 = 0; index2 < base; index2 += 1) {
-//         if (index2 < posicao) {
-//             linha = linha + ' ';
+// for (j = 0; j < valor; j += 1) {
+//     for (i = 0; i < valor; i += 1) {
+//         if (i < posicao) {
+//             linha = linha + espaco;
 //         } else {
-//             linha = linha + "*";
+//             linha = linha + asterisco;
 //         }
 //     }
 //     console.log(linha);
-//     linha = '';
 //     posicao -= 1;
+//     linha = "";
+
 // }
 
-// PIRAMIDE
+// T invertido
 
-let base = 5;
-let simbolo = '*';
-let linha = '';
-let meio = (base + 1) / 2;
-let altura = (base + 1) / 2;
-let ladoE = meio;
-let ladoD = meio;
+// for (j = 0; j < altura; j += 1) {
+//     if (j !== (altura - 1)) {
+//         for (i = 0; i < valor; i += 1) {
+//             if (i == (valor - 1) / 2) {
+//                 linha = linha + asterisco;
+//             } else {
+//                 linha = linha + espaco;
+//             }
+//         }
+//         console.log(linha);
+//         linha = "";
+//     } else {
+//         for (k = 0; k < valor; k += 1) {
+//             linha = linha + asterisco;
+//         }
+//         console.log(linha);
+//     }
+// }
 
-for (let index = 0; index <= altura; index += 1) {
-    for (let index2 = 0; index2 <= base; index2 += 1) {
-        if (index2 > ladoE && index2 < ladoD) {
-            linha = linha + "*";
-        } else {
-            linha = linha + " ";
+// Piramide Vazia
+
+for (j = 0; j < altura; j += 1) {
+    if (j !== meio) {
+        for (i = 0; i < valor; i += 1) {
+            if (i == ((valor - 1) / 2) + j || i == ((valor - 1) / 2) - j ) {
+                linha = linha + asterisco;
+            } else {
+                linha = linha + espaco;
+            }
         }
+        console.log(linha);
+        linha = "";
+    } else {
+        for (k = 0; k < valor; k += 1) {
+            linha = linha + asterisco;
+        }
+        console.log(linha);
     }
-    console.log(linha);
-    linha = '';
-    ladoE -= 1;
-    ladoD += 1;
 }
