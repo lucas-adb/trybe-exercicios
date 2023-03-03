@@ -70,3 +70,12 @@ function sumStudents(object1, object2, object3) {
 }
 
 console.log(sumStudents(lesson1, lesson2, lesson3));
+
+// #7 
+
+function getValueByNumber(object, index) {
+  let arrayValues = Object.values(object);
+  return arrayValues[index];
+}
+
+console.log(getValueByNumber(lesson1, 0));
