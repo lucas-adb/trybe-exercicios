@@ -1,31 +1,13 @@
-// let countries = {
-//     franca: 'Paris',
-//     brasil: 'Brasília',
-//     espanha: 'Madrid',
-//     portugal: 'Lisboa',
-//   };
-//   let pairKeyValue = Object.entries(countries);
-//   console.log(pairKeyValue);
+function arrayOfNumbers(vector) {
+let array = []; 
+  for (index = 0; index < vector.length; index += 1) {
+    for (index2 = 0; index2 < vector[index].length; index2 += 1) {
+      if (vector[index][index2] % 2 == 0) {
+        array.push(vector[index][index2])
+      }
+    }
+  }
+return array;
+}
 
-//   for(index in pairKeyValue) {
-//     console.log('--------');
-//     console.log('País:', pairKeyValue[index][0]);
-//     console.log('Capital:', pairKeyValue[index][1]);
-//   };
-
-let person = {
-    name:'Roberto',
-  };
-  
-  let lastName = {
-    lastName: 'Silva',
-  };
-  
-  let newPerson = Object.assign({},person,lastName);
-  newPerson.name = 'Gilberto';
-  console.log(newPerson);
-  console.log(person);
-
-
-person.name = 'Zé';
-console.log(person);
+console.log(arrayOfNumbers([[1, 2], [3,4,5,6], [7,8,9,10]]));
