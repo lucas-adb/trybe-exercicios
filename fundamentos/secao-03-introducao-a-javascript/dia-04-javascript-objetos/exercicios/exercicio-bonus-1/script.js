@@ -79,3 +79,21 @@ function getValueByNumber(object, index) {
 }
 
 console.log(getValueByNumber(lesson1, 0));
+
+// #8 
+
+function verifyPair(object, key, value) {
+  let keyArray = Object.keys(object);
+  let valueArray = Object.values(object);
+  let TrueOrFalse = false;
+
+  for (index = 0; index < keyArray.length; index += 1) {
+    if (keyArray[index] === key && valueArray[index] === value) {
+      TrueOrFalse = true;
+      return TrueOrFalse;
+    }
+  }
+return TrueOrFalse;
+}
+
+console.log(verifyPair(lesson3, 'materia', 'Maria Clara'));
