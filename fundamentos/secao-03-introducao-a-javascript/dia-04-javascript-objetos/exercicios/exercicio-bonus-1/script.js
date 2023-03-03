@@ -54,6 +54,19 @@ objectValues(lesson2)
 
 // #5 
 
-    let allLessons = Object.assign({}, lesson1, lesson2, lesson3);
+    let allLessons = Object.assign({}, {lesson1, lesson2, lesson3});
 
 console.log(allLessons);
+
+// #6 
+
+function sumStudents(object1, object2, object3) {
+  let students1 = object1['numeroEstudantes'];
+  let students2 = object2['numeroEstudantes'];
+  let students3 = object3['numeroEstudantes'];
+
+  return students1 + students2 + students3;
+
+}
+
+console.log(sumStudents(lesson1, lesson2, lesson3));
