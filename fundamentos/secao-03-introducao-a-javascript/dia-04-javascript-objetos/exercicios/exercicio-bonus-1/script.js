@@ -57,3 +57,43 @@ objectValues(lesson2)
     let allLessons = Object.assign({}, {lesson1, lesson2, lesson3});
 
 console.log(allLessons);
+
+// #6 
+
+function sumStudents(object1, object2, object3) {
+  let students1 = object1['numeroEstudantes'];
+  let students2 = object2['numeroEstudantes'];
+  let students3 = object3['numeroEstudantes'];
+
+  return students1 + students2 + students3;
+
+}
+
+console.log(sumStudents(lesson1, lesson2, lesson3));
+
+// #7 
+
+function getValueByNumber(object, index) {
+  let arrayValues = Object.values(object);
+  return arrayValues[index];
+}
+
+console.log(getValueByNumber(lesson1, 0));
+
+// #8 
+
+function verifyPair(object, key, value) {
+  let keyArray = Object.keys(object);
+  let valueArray = Object.values(object);
+  let TrueOrFalse = false;
+
+  for (index = 0; index < keyArray.length; index += 1) {
+    if (keyArray[index] === key && valueArray[index] === value) {
+      TrueOrFalse = true;
+      return TrueOrFalse;
+    }
+  }
+return TrueOrFalse;
+}
+
+console.log(verifyPair(lesson3, 'materia', 'Maria Clara'));
