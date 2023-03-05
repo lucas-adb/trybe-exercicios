@@ -45,7 +45,14 @@
 
 // #6
 
-const hello = (nome) => `Olá, ${nome}!`
+// const hello = (nome) => `Olá, ${nome}!`
 
+//   let nome = 'Ivan';
+//   console.log(hello(nome));
+
+// #7
+
+  const nomeCompleto = (nome, sobrenome) => `${nome} ${sobrenome}`
   let nome = 'Ivan';
-  console.log(hello(nome));
+  let sobrenome = 'Pires';
+  console.log(nomeCompleto(nome, sobrenome));
