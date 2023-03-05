@@ -19,13 +19,13 @@
 //   console.log('Nome:', pessoa.nome);
 //   console.log('Idade:', pessoa.idade);
 
-  // #3
+// #3
 
 //   let favoriteFood = 'Lasanha';
 //   favoriteFood = 'Hambúrguer';
 //   console.log(favoriteFood);
 
-  // #4
+// #4
 
 //   const name = 'Adriana';
 //   const lastName = 'Soares';
@@ -38,7 +38,14 @@
 //   let b = 5;
 //   console.log(`O resultado da soma de ${a} + ${b} é: ${a + b}`);
 
-  // #5
+// #5
 
-  const numeroAleatorio = () => Math.random();
-  console.log(numeroAleatorio());
+// const numeroAleatorio = () => Math.random();
+// console.log(numeroAleatorio());
+
+// #6
+
+const hello = (nome) => `Olá, ${nome}!`
+
+  let nome = 'Ivan';
+  console.log(hello(nome));
