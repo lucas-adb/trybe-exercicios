@@ -124,8 +124,6 @@
       main.append(h3);
     }
 
-    console.log(body);
-
     // 11
 
     h1.className = 'title';
@@ -143,6 +141,13 @@
 
     main.style.backgroundColor = 'green';
 
+    // remove lista nove e dez
+
+    const li = document.querySelectorAll('li');
+    li[8].remove();
+    li[9].remove();
+
+    console.log(li[0]);
 
   </script>
 </body>
