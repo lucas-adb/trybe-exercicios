@@ -71,7 +71,7 @@
     const main = document.createElement('main');
     body.append(main);
     main.className = 'main-content';
-    
+
     // 3
 
     const section = document.createElement('section');
@@ -95,6 +95,33 @@
     const section3 = document.createElement('section');
     main.append(section3);
     section3.className = 'right-content';
+
+    // 7
+
+    const img = document.createElement('img');
+    section2.append(img);
+    img.className = 'small-image';
+    img.src = 'https://picsum.photos/200';
+
+    // 8 
+
+    const ul = document.createElement('ul');
+    section3.append(ul);
+
+    const listOneToTen = ['um', 'dois', 'três', 'quatro', 'cinco', 'seis', 'sete', 'oito', 'nove', 'dez'];
+
+    for (let index = 0; index <= listOneToTen.length - 1; index += 1) {
+      const listElement = document.createElement('li');
+      listElement.innerHTML = listOneToTen[index];
+      ul.appendChild(listElement);
+    }
+
+    // 9 
+
+    for (let index = 0; index < 3; index += 1) {
+      const h3 = document.createElement('h3');
+      main.append(h3);
+    }
 
     console.log(body);
 
