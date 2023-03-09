@@ -75,8 +75,14 @@
     // 3
 
     const section = document.createElement('section');
-    body.append(section);
+    main.append(section);
     section.className = 'center-content';
+
+    // 4
+
+    const paragraph = document.createElement('p');
+    section.append(paragraph);
+    paragraph.innerText = 'Parágrafo dentro da section';
 
     console.log(body);
 
