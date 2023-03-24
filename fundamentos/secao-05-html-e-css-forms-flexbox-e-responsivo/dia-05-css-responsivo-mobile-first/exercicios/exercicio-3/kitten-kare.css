@@ -1,0 +1,271 @@
+body {
+    margin: 0;
+  }
+  
+  #container {
+    margin: 0 auto;
+    width: 100%;
+    background: #fff;
+  }
+  
+  #header {
+    background: #ccc;
+    padding: 20px;
+  }
+  
+  #header h1 {
+    margin: 0;
+  }
+  
+  #navigation {
+    width: 100%;
+    background: #333;
+  }
+  
+  #navigation ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
+  
+  #navigation ul li {
+    list-style-type: none;
+    display: flex;
+  }
+  
+  #navigation li a {
+    padding: 5px 10px;
+    color: #fff;
+    text-decoration: none;
+    border-right: 1px solid #fff;
+  }
+  
+  #navigation li a:hover {
+    background: #383;
+  }
+  
+  #content-container {
+    width: 100%;
+    background: #FFF;
+  }
+  
+  #content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 60%;
+    padding: 20px 0;
+    margin: 0 0 0 4%;
+  }
+  
+  #content h2 {
+    margin: 0;
+  }
+  
+  #aside {
+    width: 33%;
+    padding: 20px 0;
+    margin: 0 3% 0 0;
+  }
+  
+  #aside h3 {
+    margin: 5px;
+  }
+  
+  #footer {
+    background: #ccc;
+    text-align: right;
+    padding: 20px;
+    height: 1%;
+  }
+
+  @media print {
+
+    #header {
+        display: none;
+    }
+    
+    #navigation {
+        display: none;
+    }
+
+    #footer {
+        display: none;
+    }
+
+    #aside {
+        width: 33%;
+        padding: 0px 0;
+        margin: 0 5% 0 5%;
+    }
+
+    #content {
+        margin-bottom: 0;
+        width: 80%;
+    }
+    
+    #content p {
+        margin-bottom: 0;
+    }
+  }
+
+  @media screen and (max-width: 240px) {
+    #header {
+        background: #ccc;
+        width: 240px;
+        padding: 10px;
+      }
+
+     img {
+        width: 220px;
+     } 
+
+     body {
+        margin: 0;
+      }
+
+     h1 {
+        font-size: x-large;
+        margin-bottom: 0;
+     } 
+
+     h2 {
+        padding-bottom: 5px;
+     }
+
+     a {
+        font-size: small;
+     }
+
+     p {
+        font-size: small;
+        width: 220px;
+        padding: 0;
+        margin-bottom: 5px;
+     }
+
+     #navigation {
+        width: 120%;
+     }
+
+     #navigation ul {
+        display: inline-block;
+        margin: 0;
+        padding: 0;
+      }
+      
+      #navigation ul li {
+        list-style-type: none;
+      }
+
+      #navigation li a {
+        padding: 5px 10px;
+        color: #fff;
+        text-decoration: none;
+        border-right: none;
+      }
+
+      #content {
+        margin-top: 0;
+        margin-bottom: 5px;
+        padding-top: 10px;
+        padding-bottom: 0;
+      }
+
+      #aside {
+        width: 100%;
+        padding: 5px 0;
+        margin: 0 3% 0 5%;
+      }
+      
+      #aside h3 {
+        margin: 5px;
+      }
+
+      #footer {
+        width: 210px;
+      }
+
+  }
+
+  @media screen and (max-width: 360px) {
+    #header {
+        background: #ccc;
+        width: 100vh;
+        padding: 10px;
+      }
+
+     img {
+        width: 96vw;
+     } 
+
+     body {
+        margin: 0;
+      }
+
+     h1 {
+        font-size: x-large;
+        margin-bottom: 0;
+     } 
+
+     h2 {
+        padding-bottom: 5px;
+     }
+
+     a {
+        font-size: small;
+     }
+
+     p {
+        font-size: medium;
+        width: 96vw;
+        padding: 0;
+        margin-bottom: 5px;
+     }
+
+     #navigation {
+        width: 120%;
+     }
+
+     #navigation ul {
+        display: inline-block;
+        margin: 0;
+        padding: 0;
+      }
+      
+      #navigation ul li {
+        list-style-type: none;
+      }
+
+      #navigation li a {
+        padding: 5px 10px;
+        color: #fff;
+        text-decoration: none;
+        border-right: none;
+      }
+
+      #content {
+        margin-top: 0;
+        margin-bottom: 5px;
+        padding-top: 10px;
+        padding-bottom: 0;
+      }
+
+      #aside {
+        width: 100%;
+        padding: 5px 0;
+        margin: 0 3% 0 5%;
+      }
+      
+      #aside h3 {
+        margin: 5px;
+      }
+
+      #footer {
+        width: 95vw;
+      }
+
+      #content-container {
+        margin: auto;
+      }
+  }
