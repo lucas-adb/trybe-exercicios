@@ -22,11 +22,11 @@ console.log(numbers.find((number) => number % 3 === 0 && number % 5 === 0));
 
 //
 
-const names = ['João', 'Irene', 'Fernando', 'Maria'];
+const names1 = ['João', 'Irene', 'Fernando', 'Maria'];
 
 // Adicione seu código aqui
-names.find((name) => name.length === 5);
-console.log(names.find((name) => name.length === 5));
+names1.find((name) => name.length === 5);
+console.log(names1.find((name) => name.length === 5));
 
 //
 
@@ -40,3 +40,34 @@ const musicas = [
 
 musicas.find((musica) => musica.id === '31031685');
 console.log(musicas.find((musica) => musica.id === '31031685'));
+
+//
+
+const names = ['Mateus', 'José', 'Ana', 'Cláudia', 'Bruna'];
+
+const hasName = (arr, name) => {
+  //Adicione seu código aqui
+  return arr.some((ar) => ar === name);
+};
+
+console.log(hasName(names, 'Ana'));
+console.log(hasName(names, 'Pedro'));
+
+//
+
+const people = [
+  { name: 'Mateus', age: 18 },
+  { name: 'José', age: 16 },
+  { name: 'Ana', age: 23 },
+  { name: 'Cláudia', age: 20 },
+  { name: 'Bruna', age: 19 },
+];
+
+  //Adicione seu código aqui
+
+const verifyAges = (people, age) => {
+  return people.every((person) => person.age >= age);
+};
+
+console.log(verifyAges(people, 18));
+console.log(verifyAges(people, 14));
