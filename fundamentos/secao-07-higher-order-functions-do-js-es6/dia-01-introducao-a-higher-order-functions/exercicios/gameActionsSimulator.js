@@ -22,12 +22,14 @@ const battleMembers = { mage, warrior, dragon };
 
 function dmgDragon() {
   const damage = Math.floor(Math.random() * (dragon.strength - 15) + (15));
-  return `Dragon -- Dano: ${damage}`;
+  return damage;
+  // return `Dragon -- Dano: ${damage}`;
 }
 
 function dmgWarrior() {
   const damage = Math.floor(Math.random() * ((warrior.strength * warrior.weaponDmg) - warrior.strength) + (warrior.strength));
-  return `Warrior -- Dano: ${damage}`;
+  return damage;
+  // return `Warrior -- Dano: ${damage}`;
 }
 
 function dmgMage() {
@@ -36,13 +38,50 @@ function dmgMage() {
   } else {
     mage.mana = mage.mana - 15;
     const damage = Math.floor(Math.random() * ((mage.intelligence * 2) - mage.intelligence) + (mage.intelligence));
-    return `Mage -- Mana: ${mage.mana} Dano: ${damage}`;
+    return `${mage.mana} ${damage}`;
   }
 };
 
 console.log(dmgDragon());
 console.log(dmgWarrior());
 console.log(dmgMage());
+console.log(dmgMage().split(' '));
 
 // Parte II
+
+const gameActions = {
+  // Crie as HOFs neste objeto.
+  warriorTurn: () => {
+    const damage = dmgWarrior();
+    dragon.healthPoints = dragon.healthPoints - damage;
+    warrior.damage = damage;
+  },
+  mageTurn: () => {
+    const split = (dmgMage()).split(' ');
+    const mana = split[0];
+    const damage = split[1];
+    dragon.healthPoints = dragon.healthPoints - damage;
+    mage.damage = damage;
+    mage.mana = mana;
+  },
+  dragonTurn: () => {
+    const damage = dmgDragon();
+    warrior.healthPoints = warrior.healthPoints - damage;
+    mage.healthPoints = mage.healthPoints - damage;
+    dragon.damage = damage;
+  },
+  battleMembers: () => {
+    gameActions.warriorTurn();
+    gameActions.mageTurn();
+    gameActions.dragonTurn();
+    console.log(battleMembers);
+  }
+};
+
+gameActions.battleMembers();
+gameActions.battleMembers();
+gameActions.battleMembers();
+gameActions.battleMembers();
+gameActions.battleMembers();
+// gameActions.battleMembers();
 
